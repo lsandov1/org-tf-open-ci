@@ -14,7 +14,7 @@
 ** Staging Scripts (TF-M ID7, TF-A ID7)
 *** A staging version of the scripts created on the production instance
 *** Job configuration
-**** TODO Ability to build multiple configurations of TF-A (TF-A ID9)
+**** UNDER-REVIEW <2020-07-09 jue> <2020-07-10 vie> https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4917 Ability to build multiple configurations of TF-A (TF-A ID9)
 **** TODO Provide a way to re-trigger the jobs manually (TF-A ID3)
 **** DONE https://projects.linaro.org/browse/LSS-1485 Ability to specify at run time that a CI job should keep all artefacts indefinitely. (TF-A ID22)
 		 CLOSED: [2020-07-08 mié 14:44]
@@ -46,7 +46,7 @@
 			:LOGBOOK:
 			CLOCK: [2020-07-08 mié 14:21]--[2020-07-08 mié 14:22] =>  0:01
 			:END:
-**** TODO Ability to build multiple configurations of TF-A Tests (TF-A ID12)
+**** UNDER-REVIEW <2020-07-09 jue> <2020-07-10 vie> https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4917 Ability to build multiple configurations of TF-A Tests (TF-A ID12)
 **** Run TF-TF tests "bare metal" on FVP (TF-A ID24)
 **** TODO CI results for TF-A and TF-TF must stay available for a minimum duration (eg. 1 week) (TF-A ID21)
 ** Test Levels
