@@ -1,0 +1,52 @@
+deprecated in favor of the tf-open-ci.org table
+* M1 [%]
+** Planning, Handover and Deployment
+*** DONE SOW and Project Plan
+		CLOSED: [2020-07-07 mar 17:28]
+*** DONE Hand over from OCE to Developer Services 
+		CLOSED: [2020-07-07 mar 17:27]
+
+* M2 [%]
+** FVP Support (TF-M ID3, TF-A ID26)
+*** FVP models running CI jobs
+** Staging Scripts (TF-M ID7, TF-A ID7)
+*** A staging version of the scripts created on the production instance
+*** Job configuration
+**** UNDER-REVIEW <2020-07-09 jue> <2020-07-10 vie> https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4917 Ability to build multiple configurations of TF-A (TF-A ID9)
+**** BLOCK <2020-07-13 lun>Provide a way to re-trigger the jobs manually (TF-A ID3). I have asked Ben and Riku about it
+**** DONE https://projects.linaro.org/browse/LSS-1485 Ability to specify at run time that a CI job should keep all artefacts indefinitely. (TF-A ID22)
+		 CLOSED: [2020-07-08 mié 14:44]
+***** Raise a ticket about it, assign it to Riku
+
+** Static Analysis Integration (TF-M ID1, TF-A ID17, TF-A ID19)
+*** UNDER-REVIEW <2020-07-13 lun> create trigger. Seems that the the trigger template approach did not work because run-jjb.py is expecting explicit yaml files.
+*** DONE Arm check scripts
+		CLOSED: [2020-07-08 mié 11:25]
+*** DONE cppcheck
+		CLOSED: [2020-07-08 mié 11:26]
+*** DONE Coverity Free online check
+		CLOSED: [2020-07-08 mié 11:26]
+
+* M3 & M4 [%]
+** TF-A Tests
+*** BLOCK Create CI loop for TF-A Tests (TF-A ID2) :tf_a_job_configs:tf_a_ci_scripts:
+**** CI-loop patchset                                      :tf_a_job_configs:
+***** v1 <2020-07-06 lun> https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4873 :tf_a_job_configs:
+***** v2 <2020-07-07 mar> https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4873 :tf_a_job_configs:
+***** v3 <2020-07-07 mar> https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4873 :tf_a_job_configs:
+***** v1 <2020-07-07 mar> https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/4878 :tf_a_ci_scripts:
+****** BLOCK <2020-07-08 mié> patch wont be merged: arm will push all their internal build/run configs (groups) so no need for this one :tf_a_ci_scripts:
+****** <2020-07-08 mié> patch abandoned
+***** UNDER-REVIEW <2020-07-08 mié> https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/4884 upgrade toolchains as suggested by Zelalem :tf_a_ci_scripts:
+***** UNDER-REVIEW <2020-07-08 mié> https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/4886 fix on cpp log file
+***** BLOCK <2020-07-13 lun> test zelalem patch that sync groups. merge conflict with toolchain upgrade. lets wait for zelalem to fix the merge conflict
+***** DONE create ticket to install proper toolchains https://projects.linaro.org/browse/LSS-1484
+			CLOSED: [2020-07-08 mié 14:37]
+			:LOGBOOK:
+			CLOCK: [2020-07-08 mié 14:21]--[2020-07-08 mié 14:22] =>  0:01
+			:END:
+**** UNDER-REVIEW <2020-07-09 jue> <2020-07-10 vie> https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4917 Ability to build multiple configurations of TF-A Tests (TF-A ID12)
+**** Run TF-TF tests "bare metal" on FVP (TF-A ID24)
+**** UNDER-REVIEW <2020-07-13 lun> https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4939 CI results for TF-A and TF-TF must stay available for a minimum duration (eg. 1 week) (TF-A ID21)
+** Test Levels
+*** Provide facility for a job to pass the "level" of testing required, eg. minimal, full, etc., where different tests are executed depending on the level passed into (TF-M ID10, TF-A ID31)
