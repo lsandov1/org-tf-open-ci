@@ -1,0 +1,27 @@
+#+TODO: TODO(t) WIP(r) UNDER-REVIEW(b) BLOCK(k) | DELEGATED(d) FIXED(f) INVALID(i) DONE(o)
+
+* Task/Date tracker
+
+** UNDER-REVIEW installing toolchains on tf-a-job-config builders https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/5074 :extra_m3:
+ <2020-07-27 lun>
+** TODO arm static checks on tf-m patchsets https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/4972 :tf_m_ci_scripts:
+
+*** two check removed so far: check-line-endings and check-coding-style  :m2:
+ <2020-07-27 lun>
+** UNDER-REVIEW enable check-line-endings at patch level https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5091   <2020-07-27 lun> :tf_a_ci_scripts:m2:tf_a:tf_a_id17:tf_a_id19:
+
+** UNDER-REVIEW git ignore static-check python cache folder https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5092 <2020-07-27 lun> <2020-07-28 mar> :tf_a_job_configs:
+
+** INVALID enable 'make checkpatch' <2020-07-27 lun>  . Reason: this is already implemented :tf_m:m2:
+** UNDER-REVIEW prepare upgrade for mbedtls https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/5124 :tf_a_job_configs:
+** TODO include help_tests on main makefile https://review.trustedfirmware.org/c/TF-A/tf-a-tests/+/4947 
+** BLOCK trigger for TF-A gerrit patchsets events https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4938
+** BLOCK split test_groups parametes https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4917
+** UNDER-REVIEW install linaro toolchain 6.2 chain https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/5111 <2020-07-28 mar> :tf_a_job_configs:tf_a:
+** UNDER-REVIEW clean build folder before build execution execution https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/5112 <2020-07-28 mar> :tf_m_ci_scripts:
+** UNDER-REVIEW fix base folder documentaion https://review.trustedfirmware.org/c/TF-M/trusted-firmware-m/+/5113 :tf_m:
+** DONE create a FVP device type https://projects.linaro.org/browse/LSS-1393 <2020-07-29 mié> :fvp:lava:
+** WIP FVP Support <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> :fvp:tf_m:tf_m_id3:tf_a_id26:
+** TODO create missing readmes files                        :tf_a_ci_scripts:
+
+
