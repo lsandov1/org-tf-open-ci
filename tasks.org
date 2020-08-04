@@ -21,7 +21,7 @@
 ** UNDER-REVIEW clean build folder before build execution execution https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/5112 <2020-07-28 mar> :tf_m_ci_scripts:
 ** UNDER-REVIEW fix base folder documentaion https://review.trustedfirmware.org/c/TF-M/trusted-firmware-m/+/5113 :tf_m:
 ** DONE create a FVP device type https://projects.linaro.org/browse/LSS-1393 <2020-07-29 mié> :fvp:lava:
-** WIP FVP Support <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> <2020-08-03 lun> :fvp:tf_m:tf_m_id3:tf_a_id26:
+** WIP FVP Support <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> <2020-08-03 lun> <2020-08-04 mar>:fvp:tf_m:tf_m_id3:tf_a_id26:
 ** TODO create missing readmes files                        :tf_a_ci_scripts:
 ** TODO replace #!/bin/bash for #!/usr/bin/env bash         :tf_a_ci_scripts:
 ** TODO introduce set -e in *_utils.sh https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5145                     :tf_a_ci_scripts:

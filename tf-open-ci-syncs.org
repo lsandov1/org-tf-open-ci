@@ -1,0 +1,96 @@
+* Open CI Syncs
+
+** <2020-07-15 mié>
+*** force push those patchset with CI failure. CI is broken so failures are still there
+*** BLOCK CI is broken, missing libraries linaro release 19_06 https://projects.linaro.org/browse/LSS-1500
+**** BLOCK https://review.trustedfirmware.org/c/TF-A/trusted-firmware-a/+/4554
+**** BLOCK https://review.trustedfirmware.org/c/TF-A/trusted-firmware-a/+/4640
+*** BLOCK static checks for TF-M. email sent to arm team about this topic and how to approach it.
+		
+*** test levels
+
+
+** <2020-07-29 mié>
+*** TF-A is now working
+*** TF-M is still broken. 'FYI, Ben has worked out why the bionic label is missing and why the zombie jobs are happening
+It's a problem with "K8", Kubernetes / fargate / ec2 magic'
+*** lots of duplicates
+*** FVP device
+*** check this ticket https://projects.linaro.org/browse/LSS-1430
+*** TODO submit a lava request manually using artefacts
+*** DONE update the CI page with all of the links and review blocks (ticket ids)
+*** TODO make sure all blocked tasks is not from us
+
+** <2020-08-04 mar>
+
+*** first estimation of number of platforms (PLAT) that are covereted of tf-a-ci-scripts
+
+#+BEGIN_SRC bash
+# list PLAT's 
+cd ~/repos/TF-A/tf-a-ci-scripts && grep -h -o 'PLAT=[[:alnum:]]*' tf_config/* | sort | uniq 
+#+END_SRC
+
+#+RESULTS:
+| PLAT=a3700       |
+| PLAT=a5ds        |
+| PLAT=a70x0       |
+| PLAT=a80x0       |
+| PLAT=agilex      |
+| PLAT=arm         |
+| PLAT=axg         |
+| PLAT=corstone700 |
+| PLAT=fvp         |
+| PLAT=g12a        |
+| PLAT=gxbb        |
+| PLAT=gxl         |
+| PLAT=hikey       |
+| PLAT=hikey960    |
+| PLAT=imx8mm      |
+| PLAT=imx8mn      |
+| PLAT=imx8mq      |
+| PLAT=imx8qm      |
+| PLAT=imx8qx      |
+| PLAT=juno        |
+| PLAT=k3          |
+| PLAT=ls1043      |
+| PLAT=mt6795      |
+| PLAT=mt8173      |
+| PLAT=mt8183      |
+| PLAT=n1sdp       |
+| PLAT=picopi      |
+| PLAT=poplar      |
+| PLAT=px30        |
+| PLAT=qemu        |
+| PLAT=rcar        |
+| PLAT=rde1edge    |
+| PLAT=rdn1edge    |
+| PLAT=rk3288      |
+| PLAT=rk3328      |
+| PLAT=rk3368      |
+| PLAT=rk3399      |
+| PLAT=rpi3        |
+| PLAT=rpi4        |
+| PLAT=sgi575      |
+| PLAT=sgm775      |
+| PLAT=stingray    |
+| PLAT=stm32mp1    |
+| PLAT=stratix10   |
+| PLAT=sun50i      |
+| PLAT=synquacer   |
+| PLAT=tc0         |
+| PLAT=tegra       |
+| PLAT=uniphier    |
+| PLAT=versal      |
+| PLAT=warp7       |
+| PLAT=zynqmp      |
+
+#+BEGIN_SRC bash
+#count PLAT's
+cd ~/repos/TF-A/tf-a-ci-scripts && grep -h -o 'PLAT=[[:alnum:]]*' tf_config/* | sort | uniq | wc
+#+END_SRC
+
+#+RESULTS:
+: 52      52     603
+
+
+
