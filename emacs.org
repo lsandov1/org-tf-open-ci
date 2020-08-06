@@ -3,4 +3,6 @@
 ** TODO create a function that duplicates a line and set point into the start of the new line
 ** TODO function that dires current's buffer directory
 ** TODO on *compilation* buffer, point must be always at the end of buffer
+** TODO key-binding for whitespace-mode
+** TODO place dired buffer using human format for file sizes
 

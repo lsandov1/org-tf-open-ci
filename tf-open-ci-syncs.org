@@ -1,3 +1,5 @@
+#+TODO: TODO(t) WIP(r) UNDER-REVIEW(b) BLOCK(k) | DELEGATED(d) FIXED(f) INVALID(i) DONE(o)
+
 * Open CI Syncs
 
 ** <2020-07-15 mié>
@@ -9,7 +11,6 @@
 		
 *** test levels
 
-
 ** <2020-07-29 mié>
 *** TF-A is now working
 *** TF-M is still broken. 'FYI, Ben has worked out why the bionic label is missing and why the zombie jobs are happening
@@ -20,6 +21,7 @@ It's a problem with "K8", Kubernetes / fargate / ec2 magic'
 *** TODO submit a lava request manually using artefacts
 *** DONE update the CI page with all of the links and review blocks (ticket ids)
 *** TODO make sure all blocked tasks is not from us
+
 
 ** <2020-08-04 mar>
 
@@ -93,4 +95,17 @@ cd ~/repos/TF-A/tf-a-ci-scripts && grep -h -o 'PLAT=[[:alnum:]]*' tf_config/* | 
 : 52      52     603
 
 
+
+*** status of '** WIP FVP Support <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> <2020-08-03 lun> <2020-08-04 mar>:fvp:tf_m:tf_m_id3:tf_a_id26:'
+**** WIP for a single model (run_config)
+**** LAVA yaml produced but not tested
+***** status of the staging instance? does it have access to private docker registry?
+***** TODO before testing on LAVA, testing will be done locally **without** using LAVA and just calling the model binary
+***** TODO RFC patchset to be sent today. This is important to make sure we are in the right path (and not reinventing the wheel again)
+***** this work required lots of reverse engineering and will greatly help the last taks of this phase: documentation (lots of documentation required)
+
+
+*** status of '** TODO arm static checks on tf-m patchsets https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/4972 :tf_m_ci_scripts:'
+**** ARM (Karl) required a minor rework of the patchset: two patches (commits): 1. the 'copy & paste' from TF-A scripts and 2. the changes done to adopt to TF-M
+**** There othe check pending is coverity on TF-M. Coverity is a tree checker, not a patch checker. Let's make sure Coverity fits on TF-M before doing this work. 
 
