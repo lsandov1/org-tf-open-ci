@@ -26,8 +26,7 @@
 ** UNDER-REVIEW replace #!/bin/bash for #!/usr/bin/env bash https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5185  <2020-08-04 mar> :tf_a_ci_scripts:
 ** TODO introduce set -e in *_utils.sh https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5145                     :tf_a_ci_scripts:
 ** TODO call_func must fail in case of non-function (use type -t)  :tf_a_ci_scripts:utils.sh:
-** TODO bash type builtin, --help output, indictes lowercase in name paramter instead of lowercase
-** TODO report issue in magit when changing mode from 644 to 755
+** UNDER-REVIEW silence coverity builds https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5226
 
 
 

@@ -5,4 +5,5 @@
 ** TODO on *compilation* buffer, point must be always at the end of buffer
 ** TODO key-binding for whitespace-mode
 ** TODO place dired buffer using human format for file sizes
+** TODO key binding for toggle-truncate-lines
 
