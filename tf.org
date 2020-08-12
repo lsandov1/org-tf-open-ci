@@ -4,7 +4,7 @@
 
 ** DONE installing toolchains on tf-a-job-config builders https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/5074 :extra_m3:
  <2020-07-27 lun>
-** UNDER-REVIEW arm static checks on tf-m patchsets https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/4972 <2020-08-05 mié> :tf_m_ci_scripts:
+** UNDER-REVIEW arm static checks on tf-m patchsets https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/4972 <2020-08-06 jue> <2020-08-05 mié> :tf_m_ci_scripts:
 
 *** two check removed so far: check-line-endings and check-coding-style  :m2:
  <2020-07-27 lun>
@@ -23,10 +23,14 @@
 ** DONE create a FVP device type https://projects.linaro.org/browse/LSS-1393 <2020-07-29 mié> :fvp:lava:
 ** WIP FVP Support https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5180  <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> <2020-08-03 lun> <2020-08-04 mar>:fvp:tf_m:tf_m_id3:tf_a_id26:
 ** DONE create missing readmes files  https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5183 <2020-08-04 mar>:tf_a_ci_scripts:
-** UNDER-REVIEW replace #!/bin/bash for #!/usr/bin/env bash https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5185  <2020-08-04 mar> :tf_a_ci_scripts:
+** DONE replace #!/bin/bash for #!/usr/bin/env bash https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5185  <2020-08-04 mar> :tf_a_ci_scripts:
 ** TODO introduce set -e in *_utils.sh https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5145                     :tf_a_ci_scripts:
 ** TODO call_func must fail in case of non-function (use type -t)  :tf_a_ci_scripts:utils.sh:
-** UNDER-REVIEW silence coverity builds https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5226
+** DONE silence coverity builds https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5226
+** UNDER-REVIEW several fixes on coverity https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5226 https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5227 https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5228 <2020-08-07 vie> :tf_a_ci_scripts:coverity:static_checks:
+** TODO create a function to detect ARM CI environment
+** TODO document the cmake COMPILER flag
+** WIP migrate (from tf-a) coverity and adopt it to  tf-m <2020-08-10 lun> :tf_m_ci_scripts:tf_m:coverity:static_checks:tf_m_id1:
 
 
 

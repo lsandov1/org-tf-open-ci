@@ -109,3 +109,90 @@ cd ~/repos/TF-A/tf-a-ci-scripts && grep -h -o 'PLAT=[[:alnum:]]*' tf_config/* | 
 **** ARM (Karl) required a minor rework of the patchset: two patches (commits): 1. the 'copy & paste' from TF-A scripts and 2. the changes done to adopt to TF-M
 **** There othe check pending is coverity on TF-M. Coverity is a tree checker, not a patch checker. Let's make sure Coverity fits on TF-M before doing this work. 
 
+** <2020-08-12 mié>
+
+*** TODO no work done on FVP licenses, alias FlexLM licenses
+
+*** WIP started reading the documentation the share documentation, specially tf-a-ci-doc.sh. these was shared to Leo some time ago but did not read it: I was doing reverse engineering
+**** document is still mostly valid (though I have not gone in detail)
+**** will be used as a main reference
+***** some documentation patcheds (readmes) have already land to master and my plan is to start creating rst files, this will
+help me understanding all framework and less work for last milestone.
+
+**** Impact on previous work based on tf-a-ci-scripts sync: NONE
+**** (First impression) Impact on previous work based on tf-a-job-configs sync: 
+
+***** ARM CI jobs 
+
+ pros
+
+ - Jobs call multiple scripts instead allowing much higher and simpler Jenkins Job Parallelization
+ - ARM Jobs already in sync with tf-a-ci-scripts so no need to do 'much' work from linaro
+ - most important: this is the ARM way and it has been tested with much more load so we indirectly know that it 'scales well'
+
+ cons
+
+ - job migration/replacement
+   - remove all hardcoded links
+   - test
+
+
+**** Open CI jobs
+
+pros
+
+- a bit more familiar that ARM jobs
+- just one single script is called (run_local_ci.sh) and all work is done by latter
+
+cons
+
+- failure debugging probably is more difficult because a single script does all
+- most important: this is not what ARM wants.
+  
+
+***** ARM CI Job migration: time estimates
+
+* Job migration. 2 weeks
+  
+** Linaro has all ARM CI jobs specs that need to be migrated into the Open CI.
+
+** Remove all hard coded paths
+
+** Test migration (staging instance)
+
+
+* FVP support (remaining work): 1 week
+
+** RFC patchset already available for tf-a-ci-scripts. Although it is a RFC (request for comments), it is looking good and targeting master soon. Needs another +1
+** Push containers with FVP models to private registry
+** Test full CI cycle (tf-ci-gateway -> tf-worker -> tf-build-for-lava -> LAVA) at least with one model
+** This task depends on the job migration, so the latter must be finished first.
+
+
+* Previous work (to be reworked): 3 weeks
+
+** split test_groups parameters: 1 week
+https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4917
+
+This work impacts several ID's:
+M2 Ability to build multiple configurations of TF-A (TF-A ID9)
+M3 & M4 Ability to build multiple configurations of TF-A Tests (TF-A ID12)
+needs to be re-done.
+
+** Define trigger and tf-a-test job configs alias CI loop: 2 weeks
+https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4873
+this work impacts: Create CI loop for TF-A Tests (TF-A ID2)
+
+
+
+
+https://review.trustedfirmware.org/q/project:ci%252Ftf-a-job-configs+status:open
+
+
+
+
+
+* TODO send to glen a brief resume of the above
+
+* TODO check into TF-M issue, set docker registry and push docker container https://projects.linaro.org/browse/LSS-1525
+
