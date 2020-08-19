@@ -1,0 +1,38 @@
+* Ryan:Leo 1:1
+
+** <2020-07-16 jue>
+*** on-boarding
+
+**** DONE add extra 4 hours between 5-11 july
+		 CLOSED: [2020-07-16 jue 10:29]
+
+**** 60% 40%
+
+**** split CI-Loop and CI tests on on-boarding document
+
+**** DONE fill some start and end dates
+		 CLOSED: [2020-07-16 jue 10:33]
+
+*** annual review
+
+**** dean arnold for tf-a-job-configs
+
+**** karl zahn, dean birst for tf-m-job-config
+
+**** DONE add reviewers to pending patchset, review gerrit and git-blame
+		 CLOSED: [2020-07-16 jue 10:33]
+
+**** DONE maintainership
+		 CLOSED: [2020-07-16 jue 10:45]
+
+**** BLOCK one or two more goals
+
+** <2020-08-06 jue>
+** still issues with TF-M CI jobs
+*** templating is not fully working: final yamls still with template variables
+*** ryan taking vacations from Aug 12 until end of Aug
+*** TF-M CI is looking for a clang docker container by R. thinks we do not  really need clang.
+*** TODO look at LSS-1468, zombie threads/jobs
+
+
+

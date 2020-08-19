@@ -1,0 +1,5 @@
+
+** TODO bash type builtin, --help output, indictes lowercase in name paramter instead of lowercase :bash:
+** TODO report issue in magit when changing mode from 644 to 755      :magit:
+** TODO report issues that 'g' does not refresh magit-log buffer      :magit:
+
