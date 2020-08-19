@@ -109,6 +109,7 @@ cd ~/repos/TF-A/tf-a-ci-scripts && grep -h -o 'PLAT=[[:alnum:]]*' tf_config/* | 
 **** ARM (Karl) required a minor rework of the patchset: two patches (commits): 1. the 'copy & paste' from TF-A scripts and 2. the changes done to adopt to TF-M
 **** There othe check pending is coverity on TF-M. Coverity is a tree checker, not a patch checker. Let's make sure Coverity fits on TF-M before doing this work. 
 
+
 ** <2020-08-12 mié>
 
 *** TODO no work done on FVP licenses, alias FlexLM licenses
@@ -150,7 +151,7 @@ cons
 - most important: this is not what ARM wants.
   
 
-***** ARM CI Job migration: time estimates
+***** ARM CI Job Sync: time estimates
 
 * Job migration. 2 weeks
   
@@ -169,7 +170,7 @@ cons
 ** This task depends on the job migration, so the latter must be finished first.
 
 
-* Previous work (to be reworked): 3 weeks
+* Previous work (to be reworked): 2 weeks
 
 ** split test_groups parameters: 1 week
 https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4917
@@ -179,7 +180,7 @@ M2 Ability to build multiple configurations of TF-A (TF-A ID9)
 M3 & M4 Ability to build multiple configurations of TF-A Tests (TF-A ID12)
 needs to be re-done.
 
-** Define trigger and tf-a-test job configs alias CI loop: 2 weeks
+** Define trigger and tf-a-test job configs alias CI loop: 1 weeks
 https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4873
 this work impacts: Create CI loop for TF-A Tests (TF-A ID2)
 
@@ -188,11 +189,8 @@ this work impacts: Create CI loop for TF-A Tests (TF-A ID2)
 
 https://review.trustedfirmware.org/q/project:ci%252Ftf-a-job-configs+status:open
 
+* DONE send to glen a brief resume of the above
 
-
-
-
-* TODO send to glen a brief resume of the above
-
-* TODO check into TF-M issue, set docker registry and push docker container https://projects.linaro.org/browse/LSS-1525
+* BLOCK check into TF-M issue, set docker registry and push docker container https://projects.linaro.org/browse/LSS-1525
+We need to set the DOCKER_PREFIX and LICENSE_VARIABLE at tf-m-lava-submit.yaml. I asked the team about latter value <2020-08-12 mié>
 

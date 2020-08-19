@@ -14,7 +14,7 @@
 
 ** INVALID enable 'make checkpatch' <2020-07-27 lun>  . Reason: this is already implemented :tf_m:m2:
 ** INVALID prepare upgrade for mbedtls https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/5124 :tf_a_job_configs:
-** TODO include help_tests on main makefile https://review.trustedfirmware.org/c/TF-A/tf-a-tests/+/4947 
+** UNDER-REVIEW include help_tests on main makefile https://review.trustedfirmware.org/c/TF-A/tf-a-tests/+/4947 <2020-08-18 mar> :tf_a_tests:tf_a:
 ** BLOCK trigger for TF-A gerrit patchsets events https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4938
 ** BLOCK split test_groups parametes https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/4917
 ** INVALID install linaro toolchain 6.2 chain https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/5111 <2020-07-28 mar> :tf_a_job_configs:tf_a:
@@ -24,13 +24,17 @@
 ** WIP FVP Support https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5180  <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> <2020-08-03 lun> <2020-08-04 mar>:fvp:tf_m:tf_m_id3:tf_a_id26:
 ** DONE create missing readmes files  https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5183 <2020-08-04 mar>:tf_a_ci_scripts:
 ** DONE replace #!/bin/bash for #!/usr/bin/env bash https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5185  <2020-08-04 mar> :tf_a_ci_scripts:
-** TODO introduce set -e in *_utils.sh https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5145                     :tf_a_ci_scripts:
+** INVALID introduce set -e in *_utils.sh https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5145 :tf_a_ci_scripts:
 ** TODO call_func must fail in case of non-function (use type -t)  :tf_a_ci_scripts:utils.sh:
 ** DONE silence coverity builds https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5226
 ** UNDER-REVIEW several fixes on coverity https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5226 https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5227 https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5228 <2020-08-07 vie> :tf_a_ci_scripts:coverity:static_checks:
 ** TODO create a function to detect ARM CI environment
 ** TODO document the cmake COMPILER flag
-** WIP migrate (from tf-a) coverity and adopt it to  tf-m <2020-08-10 lun> :tf_m_ci_scripts:tf_m:coverity:static_checks:tf_m_id1:
-
-
-
+** UNDER-REVIEW migrate (from tf-a) coverity and adopt it to  tf-m https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/5293 <2020-08-10 lun> <2020-08-12 mié> <2020-08-13 jue> :tf_m_ci_scripts:tf_m:coverity:static_checks:tf_m_id1:m2:
+** UNDER-REVIEW set default KEY_SIZE variable <2020-08-14 vie> https://review.trustedfirmware.org/c/TF-A/trusted-firmware-a/+/4640 :trusted_firmware_a:tf_a:
+** UNDER-REVIEW DOCKER_REGISTRY issue on TF-M CI https://projects.linaro.org/browse/LSS-1525 <2020-08-14 vie> https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/5310 :trusted_firmware_m:tf_m_ci_scripts:
+** UNDER-REVIEW limit make jobs on coverity <2020-08-14 vie> https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5228 :tf_a_ci_scripts:
+** UNDER-REVIEW define functions to detect jenkins env and jenkins arm env jenkins env https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5321 <2020-08-17 lun> :tf_a_ci_scripts:tf_a:
+** UNDER-REVIEW web sequence diagram of open ci jobs https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5325 <2020-08-17 lun> :tf_a:tf_a_ci_scripts:
+** TODO example job and unit tests for lava yaml withot telnet connection https://git.lavasoftware.org/lava/lava/-/merge_requests/1225#note_17237 <2020-08-18 mar> :lava:
+** WIP Change request document <2020-08-18 mar> https://docs.google.com/document/d/11SaT4-eqlfFQmA_d6qUOIrruXiZes3S3tfIKpGxjizA/edit?ts=5f3be917# :tf_a:
