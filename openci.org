@@ -1,25 +1,25 @@
 #+TODO: TODO(t) WIP(r) UNDER-REVIEW(b) BLOCK(k) | DELEGATED(d) FIXED(f) INVALID(i) DONE(o)
 
-* M1	Planning, Handover and Deployment
+* DONE M1	Planning, Handover and Deployment
 SOW and project plan
 Hand over from OCE to Developer Services
 	1-Jun-20 	Completed
 
-Project Plan & SoW Reviewed. Meetings have been held and follow on meetings will occur as normal course of the project
+* WIP M2	FVP Support (TF-M ID3, TF-A ID26) [0/3] Original estimation <2020-07-25 sáb> . New Estimation 
+
+** BLOCK ARM CI Job migration :duration:2w:
+*** if TF board decides Linaro to do this work, then this is P1 and the rest of the work is stopped.
+
+** WIP FVP models running CI jobs (LSS-1393, tf-a-ci-scripts/+/5180) 
+*** WIP Test FVP models on the staging instance. Block by https://projects.linaro.org/browse/LSS-1430 ? :duration:1w:
+*** BLOCK Once ARM CI Job migration is done, test it again under the new job :duration:3d:
 
 
-
-* M2	FVP Support (TF-M ID3, TF-A ID26) [1/3] Original estimation <2020-07-25 sáb> . New Estimation 
-
-** TODO ARM CI Job migration First estimation: 2 week            :arm_ci_job:
-
-** BLOCK FVP models running CI jobs (LSS-1393, tf-a-ci-scripts/+/5180) :arm_ci_job:
-
-** DONE Staging Scripts (TF-M ID7, TF-A ID7)
+** WIP Staging Scripts (TF-M ID7, TF-A ID7)
 A staging version of the scripts created on the production instance (LSS-1430)
 
 ** Job configuration [2/3]
-*** BLOCK Ability to build multiple configurations of TF-A (TF-A ID9 tf-a-job-configs/4917). First Estimation: 1 week. :arm_ci_job:
+*** BLOCK Ability to build multiple configurations of TF-A (TF-A ID9 tf-a-job-configs/4917). First Estimation: 1 week. 
 *** DONE Provide a way to re-trigger the jobs manually (TF-A ID3 LSS-1470)
 *** DONE Ability to specify at run time that a CI job should keep all artifacts indefinitely. (TF-A ID22 LSS-1485)
 
@@ -36,28 +36,20 @@ A staging version of the scripts created on the production instance (LSS-1430)
 *** UNDER-REVIEW Coverity Free online check (tf-m-ci-scripts/5293)
 
 
-Job Config/Static Analysis: Patches submitted, awaiting reviews
-
-Awaiting internal ARM CI to OpenCI
-
-
 * M3 & M4	TF-A Tests [1/5] Original estimation <2020-07-23 jue>
-** BLOCK Create CI loop for TF-A Tests (TF-A ID2 tf-a-job-configs/4873). First Estimation: 1 week. :arm_ci_job:
-** BLOCK Ability to build multiple configurations of TF-A Tests (TF-A ID12 tf-a-job-configs/4917) :arm_ci_job:
+** BLOCK Create CI loop for TF-A Tests (TF-A ID2 tf-a-job-configs/4873). First Estimation: 1 week. 
+** BLOCK Ability to build multiple configurations of TF-A Tests (TF-A ID12 tf-a-job-configs/4917) 
 ** DONE CI results for TF-A and TF-TF must stay available for a minimum duration (eg. 1 week) (TF-A ID21)
-** TODO Run TF-TF tests "bare metal" on FVP (TF-A ID24)
+** TODO Run TF-TF tests "bare metal" on FVP (TF-A ID24)         :duration:1w:
 
-** TODO Test Levels
+** TODO Test Levels                                             :duration:2w:
 Provide facility for a job to pass the "level" of testing required, eg. minimal, full, etc., where different tests are executed depending on the level passed into (TF-M ID10, TF-A ID31)
 
-
-
-
 * M5	Specify FVP Versions (TF-A ID13) [0/3]
-** TODO Update FVP support to host multiple versions of models :non_arm_ci_job:
-** TODO Allow jobs to specify which version of FVP models are used :arm_ci_job:
+** TODO Update FVP support to host multiple versions of models 
+** TODO Allow jobs to specify which version of FVP models are used 
 
-** TODO Compilers accessed via volumes mounted in the docker containers :non_arm_ci_job:
+** TODO Compilers accessed via volumes mounted in the docker containers 
 - Ability to integrate alternative compilers into builds (TF-M ID9, TF-A ID10)
 - Ability to use different versions of a compiler for builds (TF-A ID11)
 - Integrate one alternative compiler and have two versions of the standard Arm GCC compiler to demonstrate how the functionality works. Compilers should be secure, preventing users from accessing them directly, and should only be used for building TF CI jobs
@@ -66,7 +58,8 @@ Provide facility for a job to pass the "level" of testing required, eg. minimal,
 
 Awaiting M2
 
-* M6, M7 & M8	Musca A/B1 Support (TF-M ID5)                :non_arm_ci_job:
+
+* M6, M7 & M8	Musca A/B1 Support (TF-M ID5)                
 Musca B1 board installed in Linaro Cambridge LAVA lab.
 Musca B1 board support integrated into the CI loop.
 (LSS-1414)
@@ -89,15 +82,16 @@ Musca A removed and S1 on hold for Phase 3 (per 7/2 Meeting).
 
 QEMU SSE-200 device type now active in LAVA.
 
-* M9	Integrate PSA compliance tests (TF-M ID6)            :non_arm_ci_job:
+
+* M9	Integrate PSA compliance tests (TF-M ID6)            
 - Provide a build option to run PSA API tests
 - Ensures patches will not break PSA compliance	24-Aug-20	
 
-* M10	Modularise Build and Test Process                        :arm_ci_job:
+* M10	Modularise Build and Test Process                        
 - Remove all configuration out of the scripts and into the YAML provided to control the job. (TF-M ID14)
 - Allow the user to trigger a job with default, custom or release parameters. This gives limited permissions to the user to create jobs. (TF-M ID18) 	10-Sep-20	
 
-* M11	Documentation and User Guide (TF-M ID8)              :non_arm_ci_job:
+* M11	Documentation and User Guide (TF-M ID8)              
 - How to use the complete CI loop
 - How to integrate a new platform, including boards in a LAVA Federated lab
 - How to deploy your own instance	29-Sep-20	

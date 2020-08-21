@@ -21,7 +21,8 @@
 ** UNDER-REVIEW clean build folder before build execution execution https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/5112 <2020-07-28 mar> :tf_m_ci_scripts:
 ** UNDER-REVIEW fix base folder documentaion https://review.trustedfirmware.org/c/TF-M/trusted-firmware-m/+/5113 :tf_m:
 ** DONE create a FVP device type https://projects.linaro.org/browse/LSS-1393 <2020-07-29 mié> :fvp:lava:
-** WIP FVP Support https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5180  <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> <2020-08-03 lun> <2020-08-04 mar>:fvp:tf_m:tf_m_id3:tf_a_id26:
+** WIP FVP Support https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5180  <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> <2020-08-03 lun> <2020-08-04 mar> <2020-08-21 vie>:fvp:tf_m:tf_m_id3:tf_a_id26:
+*** Extend support for tftf baremetal
 ** DONE create missing readmes files  https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5183 <2020-08-04 mar>:tf_a_ci_scripts:
 ** DONE replace #!/bin/bash for #!/usr/bin/env bash https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5185  <2020-08-04 mar> :tf_a_ci_scripts:
 ** INVALID introduce set -e in *_utils.sh https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5145 :tf_a_ci_scripts:
@@ -37,4 +38,6 @@
 ** UNDER-REVIEW define functions to detect jenkins env and jenkins arm env jenkins env https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5321 <2020-08-17 lun> :tf_a_ci_scripts:tf_a:
 ** UNDER-REVIEW web sequence diagram of open ci jobs https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5325 <2020-08-17 lun> :tf_a:tf_a_ci_scripts:
 ** TODO example job and unit tests for lava yaml withot telnet connection https://git.lavasoftware.org/lava/lava/-/merge_requests/1225#note_17237 <2020-08-18 mar> :lava:
-** WIP Change request document <2020-08-18 mar> https://docs.google.com/document/d/11SaT4-eqlfFQmA_d6qUOIrruXiZes3S3tfIKpGxjizA/edit?ts=5f3be917# :tf_a:
+** UNDER-REVIEW Change request document <2020-08-18 mar> https://docs.google.com/document/d/11SaT4-eqlfFQmA_d6qUOIrruXiZes3S3tfIKpGxjizA/edit?ts=5f3be917# :tf_a:
+** WIP Testing of 'Allow FVP jobs to not use telnet for a console connection'  <2020-08-20 jue> <2020-08-19 mié>:lava:
+https://git.lavasoftware.org/lava/lava/-/merge_requests/1225 https://git.lavasoftware.org/lsandov1/lava/-/commits/local-fvp-telnet https://git.lavasoftware.org/lava/lava/-/merge_requests/1299
