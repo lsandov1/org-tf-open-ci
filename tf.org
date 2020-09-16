@@ -2,9 +2,93 @@
 
 * Task/Date tracker
 
+* Open CI
+
+** webpage
+
+*** update tf-m static checks, reed to green
+
+** TODO <2020-09-07 lun>arm licenses
+*** generate fvp licenses
+*** generate arm clang licenses
+
+** ansible*
+** DONE https://review.linaro.org/c/infrastructure/ansible-playbooks/+/36314 review ansible playbook <2020-09-03 jue>
+
+** dockerfiles
+*** DONE open a LSS ticket to redeploy a flexnet container<2020-09-01 mar> https://projects.linaro.org/browse/LSS-1603
+*** TODO review current license process and adopt aarch64-none-el armclang toolchain patch<2020-09-01 mar>
+*** TODO review again the requirements for toolchains and adopt it at least for toolchain multiversion. No need for llvm clang
+** BLOCK staging instance tested but still not functional. seems that jenkins is not listening to changes on next tf-a repos.<2020-09-02 mié>
+
+* TF-A
+
+** trusted-firmware
+
+*** UNDER-REVIEW default key size revisited <2020-09-10 jue> 
+
+*** UNDER-REVIEW define loop macros <2020-09-10 jue> <2020-09-11 vie>
+
+** tf-a-ci-scripts
+
+*** WIP FVP Support https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5180<2020-08-24 lun>  <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> <2020-08-03 lun> <2020-08-04 mar> <2020-08-21 vie>:fvp:tf_m:tf_m_id3:tf_a_id26:
+**** WIP Extend support for tftf baremetal
+**** UNDER-REVIEW framework to create docker images
+**** UNDER-REVIEW script that launch docker images based on yaml files <2020-08-27 jue> <2020-09-01 mar>
+***** UNDER-REVIEW review zelalem comments and fix it
+
+*** UNDER-REVIEW fix mbedtls untar issue https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5587/1 <2020-09-09 mié>
+
+*** improve a fragment extraction <2020-09-14 lun>
+
+** tf-a-job-scripts
+
+** tf-a-tests
+
+*** UNDER-REVIEW make_helpers folder created <2020-09-11 vie>
+
+*** UNDER-REVIEW conditional assigment on docs makefile <2020-09-11 vie>
+
+** tf-a staging
+
+*** first meeting with ben <2020-09-15 mar>
+
+*** testing manual trigger <2020-09-15 mar>
+
+
+
+* tf-m
+
+** tf-m-ci-scripts
+
+*** TODO check coverity comments by Xinyu Zhang<2020-09-03 jue>
+**** UNDER-REVIEW test with bare clones and fix master branch issue <2020-09-07 lun> https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/5556
+*** WIP create coverity builder comments by Xin <2020-09-09 mié>
+*** jpl coverity scripts to enable proper jenkins job execution <2020-09-11 vie>
+
+*** UNDER-REVIEW Check copyright issue reported by Xinyu Zhang <2020-08-31 lun>
+
+** tf-m-job-scripts
+
+*** UNDER-REVIEW define trigger for coverity <2020-09-11 vie>
+
+* lava
+
+** UNDER-REVIEW Testing of 'Allow FVP jobs to not use telnet for a console connection'  <2020-08-20 jue> <2020-08-19 mié>:lava:
+https://git.lavasoftware.org/lava/lava/-/merge_requests/1225 https://git.lavasoftware.org/lsandov1/lava/-/commits/local-fvp-telnet https://git.lavasoftware.org/lava/lava/-/merge_requests/1299
+*** BLOCK local testing <2020-09-01 mar> I need some more info before moving/documenting
+
+
+
+
+
+
+
 ** DONE installing toolchains on tf-a-job-config builders https://review.trustedfirmware.org/c/ci/tf-a-job-configs/+/5074 :extra_m3:
  <2020-07-27 lun>
 ** UNDER-REVIEW arm static checks on tf-m patchsets https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/4972 <2020-08-06 jue> <2020-08-05 mié> :tf_m_ci_scripts:
+*** UNDER-REVIEW rebase based on comment https://review.trustedfirmware.org/c/ci/tf-m-job-configs/+/4973/3/tf-m-static-checks.yaml@55 <2020-08-28 vie>
+*** TODO comment on https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/5194/1/jenkins/static.jpl@31 <2020-08-28 vie>
 
 *** two check removed so far: check-line-endings and check-coding-style  :m2:
  <2020-07-27 lun>
@@ -21,8 +105,6 @@
 ** UNDER-REVIEW clean build folder before build execution execution https://review.trustedfirmware.org/c/ci/tf-m-ci-scripts/+/5112 <2020-07-28 mar> :tf_m_ci_scripts:
 ** UNDER-REVIEW fix base folder documentaion https://review.trustedfirmware.org/c/TF-M/trusted-firmware-m/+/5113 :tf_m:
 ** DONE create a FVP device type https://projects.linaro.org/browse/LSS-1393 <2020-07-29 mié> :fvp:lava:
-** WIP FVP Support https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5180  <2020-07-30 jue> <2020-07-31 vie> <2020-07-29 mié> <2020-08-03 lun> <2020-08-04 mar> <2020-08-21 vie>:fvp:tf_m:tf_m_id3:tf_a_id26:
-*** Extend support for tftf baremetal
 ** DONE create missing readmes files  https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5183 <2020-08-04 mar>:tf_a_ci_scripts:
 ** DONE replace #!/bin/bash for #!/usr/bin/env bash https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5185  <2020-08-04 mar> :tf_a_ci_scripts:
 ** INVALID introduce set -e in *_utils.sh https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5145 :tf_a_ci_scripts:
@@ -39,5 +121,14 @@
 ** UNDER-REVIEW web sequence diagram of open ci jobs https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5325 <2020-08-17 lun> :tf_a:tf_a_ci_scripts:
 ** TODO example job and unit tests for lava yaml withot telnet connection https://git.lavasoftware.org/lava/lava/-/merge_requests/1225#note_17237 <2020-08-18 mar> :lava:
 ** UNDER-REVIEW Change request document <2020-08-18 mar> https://docs.google.com/document/d/11SaT4-eqlfFQmA_d6qUOIrruXiZes3S3tfIKpGxjizA/edit?ts=5f3be917# :tf_a:
-** WIP Testing of 'Allow FVP jobs to not use telnet for a console connection'  <2020-08-20 jue> <2020-08-19 mié>:lava:
-https://git.lavasoftware.org/lava/lava/-/merge_requests/1225 https://git.lavasoftware.org/lsandov1/lava/-/commits/local-fvp-telnet https://git.lavasoftware.org/lava/lava/-/merge_requests/1299
+
+*** WIP try to reproduce it locally
+** BLOCK Test levels (TF-M ID10, TF-A ID31)         :tf_a:tf_a_ci_scripts:m3:
+** UNDER-REVIEW minor fix on gen_test_desc https://review.trustedfirmware.org/c/ci/tf-a-ci-scripts/+/5404 :tf_a_ci_scripts:
+** WIP    Compilers accessed via volumes mounted in the docker containers<2020-08-24 lun> <2020-08-27 jue> <2020-08-26 mié> <2020-08-25 mar>
+   - Ability to integrate alternative compilers into builds (TF-M ID9, TF-A ID10)      
+   - Ability to use different versions of a compiler for builds (TF-A ID11)      
+   - Integrate one alternative compiler and have two versions of the standard Arm GCC compiler to demonstrate how the functionality works. Compilers should      
+   be secure, preventing users from accessing them directly, and should only be used for building TF CI jobs      
+
+
